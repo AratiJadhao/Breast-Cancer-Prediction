@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Prediction</title>
+    <style>body {
+        background: linear-gradient(
+        rgba(211, 24, 136, 0.144),
+        rgba(243, 227, 227, 0.336)
+      ),
+      url("https://tse1.mm.bing.net/th?id=OIP.dOzMlCml6_eiy5xxI1T0YwHaNV&pid=Api&rs=1&c=1&qlt=95&w=57&h=104");
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+    
+    }
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    input[type="text"], input[type="number"], select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid rgb(242, 242, 241);
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: rgb(71, 11, 250);
+        color: rgb(244, 235, 235);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: rgb(1, 13, 1);
+    }
+</style>
+</head>
+<body>
+    <h1>Breast Cancer Prediction</h1>
+    <form action="/predict" method="post">
+        <label>Age</label><br>
+        <input type="number" name="age" placeholder="Age"><br>
+        <label>Tumour-size</label><br>
+        <input type="number" name="tumour-size" placeholder="Tumour-size">
+        <label>Degree of malignancy</label><br>
+        <input type="number" name="degree of malignancy" placeholder="Degree of malignancy"><br>
+        <label>Breast Quadrant</label><br>
+        <input type="number" name="breast quadrant" placeholder="Breast Quadrant"><br>
+        <label>Node Caps</label><br>
+        <input type="number" name="node caps" placeholder="Node Caps"><br>
+        <input type="number" name="mean radius" placeholder="Mean Radius"><br>
+        <input type="number" name="mean texture" placeholder="Mean Texture"><br>
+        <input type="number" name="mean perimeter" placeholder="Mean Perimeter"><br>
+        <input type="number" name="mean area" placeholder="Mean Area"><br>
+        <input type="number" name="mean concave points" placeholder="Mean Concave Points"><br>
+        <input type="number" name="mean symmetry" placeholder="Mean Symmetry"><br>
+        <input type="number" name="mean fractal dimension" placeholder="Mean fractal dimension"><br>
+        <input type="number" name="radius error" placeholder="Radius error"><br>
+        <input type="number" name="texture error" placeholder="Texture error"><br>
+        <input type="number" name="symmetry error" placeholder="Symmetry error"><br>
+        <input type="number" name="area error" placeholder="Area error"><br>
+        <input type="number" name="smoothness error" placeholder="Smoothness error"><br>
+        <input type="number" name="compactness error" placeholder="Compactness error"><br>
+        <input type="number" name="concavity error" placeholder="Concavity error"><br>
+        <input type="number" name="concave points error" placeholder="Concave points error"><br>
+        <input type="number" name="symmetry error" placeholder="Symmetry error"><br>
+        <input type="number" name="fractal dimension error" placeholder="Fractal dimension error"><br>
+        <input type="number" name="worst radius" placeholder="Worst radius"><br>
+        <input type="number" name="worst texture" placeholder="Worst texture"><br>
+        <input type="number" name="worst perimeter" placeholder="Worst perimeter"><br>
+        <input type="number" name="worst area" placeholder="Worst area"><br>
+        <input type="number" name="worst smoothness" placeholder="Worst smoothness"><br>
+        <input type="number" name="worst concave points" placeholder="Wotrst concave points"><br>
+        <input type="number" name="worst symmmetry" placeholder="Worst symmetry"><br>
+        <input type="number" name="worst fractal dimension" placeholder="Worst fractal dimension"><br><br>
+        <input type="number" name="irradiation" placeholder="Irradiation"><br><br>
+       
+        <input type="submit" value="Predict">
+        
+    </form>
+    <h2>{{ prediction_text }}</h2>
+</body>
+</html>
